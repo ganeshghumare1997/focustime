@@ -20,7 +20,7 @@ export const FocusHistory = ({ focusHistory, onClear }) => {
   return (
     <>
       <SafeAreaView style={{ flex: 0.5, alignItems: 'center' }}>
-        {focusHistory.length && (
+        {focusHistory.length ? (
           <>
             <Text style={styles.title}>Things we've focused on</Text>
             <FlatList
@@ -37,7 +37,7 @@ export const FocusHistory = ({ focusHistory, onClear }) => {
               />
             </View>
           </>
-        )}
+        ) : null}
       </SafeAreaView>
     </>
   );
